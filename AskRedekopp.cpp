@@ -18,9 +18,10 @@ int main(){
         if (cin.fail()){
             cout << "why did you type a non-Int? Now you'll never get the next CS joke" << endl;
             string buffer;
+            cin.clear(cin.rdstate() & ~ios::failbit);
+
             getline(cin, buffer);
             // std::cin.clear(std::istream::failbit);
-            cin.clear(cin.rdstate() & ~ios::failbit);
             cout << "What is Recursion?" << endl;
             //todo show to redekopp during breakfast
         }
